@@ -1,12 +1,13 @@
 {
-  "name": "learnup-explorable-helpers",
-  "version": "0.1.0",
+  "name": "@learnupio/explorable-helpers",
+  "version": "0.1.1",
   "description": "Helper functions and callbacks for better mobile client <> explorable view integration.",
   "main": "dist/index.js",
+  "module": "dist/index.m.js",
   "source": "src/index.js",
   "scripts": {
     "dev": "npx microbundle watch",
-    "build": "microbundle",
+    "build": "npx microbundle",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -16,5 +17,14 @@
   "license": "MIT",
   "devDependencies": {
     "microbundle": "^0.11.0"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/learnupio/explorable-helpers.git"
+  },
+  "bugs": {
+    "url": "https://github.com/learnupio/explorable-helpers/issues"
+  },
+  "homepage": "https://github.com/learnupio/explorable-helpers#readme"
 }
