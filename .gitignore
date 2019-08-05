@@ -85,5 +85,8 @@ typings/
 # project specific
 pdfs/
 
-# dev parcel build
 dev
+
+dist
+
+.tern-port

@@ -2,8 +2,11 @@
   "name": "learnup-explorable-helpers",
   "version": "0.1.0",
   "description": "Helper functions and callbacks for better mobile client <> explorable view integration",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "source": "src/index.js",
   "scripts": {
+    "dev": "npx microbundle watch",
+    "build": "microbundle",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -12,8 +15,6 @@
   "author": "Gungor Kocak <gungor@learnup.io>",
   "license": "MIT",
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
-    "parcel-bundler": "^1.12.3"
+    "microbundle": "^0.11.0"
   }
 }
