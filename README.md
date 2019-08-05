@@ -67,4 +67,45 @@ We can also provide you an endpoint for that purpose.
 
 ## Getting Started
 
-*TBA*
+Install library with npm or Yarn:
+
+```console
+npm i @learnupio/explorable-helpers
+```
+
+Then import helper functions to your code.
+
+```js
+import { load, onload, complete, cancel } from '@learnupio/explorable-helpers'
+```
+
+In order to make minimum functional explorable, you'll need to provide `onload` callback and expose `load` function globally.
+
+```js
+onload((scene, enrolmentId) => {
+  // bootstrap, initialize or do whatever you want with your explorable here.
+})
+
+window.load = load
+```
+
+Having `window.load` function with exact name is required, since mobile apps directly look for that function name, and call it with relevant arguments.
+
+After that point, based on your requirements, you can call `complete` or `cancel` functions whenever you see fit.
+
+```js
+// call on complete
+complete()
+
+// call on cancel
+cancel()
+```
+
+For fullscreen explorables, `complete` and `cancel` calls enable mobile apps to perform teardown actions, close the explorable view and continue dialogue from where it left off.
+
+Rest is all up to you; use whatever framework you want, and create awesome explorables!
+
+
+## Documentation
+
+Currently, we have inline documentation for every function exposed. You can take a look at the humble source [here](https://github.com/learnupio/explorable-helpers/blob/master/src/index.js).
