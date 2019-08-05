@@ -1,7 +1,7 @@
 {
   "name": "learnup-explorable-helpers",
   "version": "0.1.0",
-  "description": "Helper functions and callbacks for better mobile client <> explorable view integration",
+  "description": "Helper functions and callbacks for better mobile client <> explorable view integration.",
   "main": "dist/index.js",
   "source": "src/index.js",
   "scripts": {
