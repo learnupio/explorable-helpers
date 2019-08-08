@@ -1,4 +1,5 @@
 var webkit = window.webkit
+const learnupAndroid = globalThis.learnup || global.learnup || window.learnup || window
 
 var START = 'start'
 var COMPLETE = 'complete'
@@ -7,14 +8,20 @@ var ERROR = 'error'
 
 var loadHandler
 
+function onPostMessage(event) {
+  console.log('sending post message', event.data)
+}
+
+window.addEventListener("message", onPostMessage, false);
+
 function postMessage(msg) {
   if (typeof webkit === 'object' && webkit && webkit.messageHandlers) {
     // iOS
     webkit.messageHandlers.callback.postMessage(msg)
   }
   else {
-    // Dev Browser
-    console.log('sending post message', msg)
+    // android or dev browser
+    learnupAndroid.postMessage(message)
   }
 }
 
