@@ -60,13 +60,15 @@ export var cancel = function() {
  *
  * @memberof module:explorable-helpers
  * @function load
+ * @param {String} name - Name of the explorable.
  * @param {String} scene - Scene of the explorable.
  * @param {String} enrolmentId - Unique identifier to distinguish relationship between a dialogue and user.
+ * @param {String} token - For internal usage. Ignore it for now.
  *
  */
-export var load = function(scene, enrolmentId) {
+export var load = function(name, scene, enrolmentId, token) {
   try {
-    loadHandler(scene, enrolmentId)
+    loadHandler(name, scene, enrolmentId, token)
     postMessage(START)
   }
   catch (err) {
@@ -78,6 +80,7 @@ export var load = function(scene, enrolmentId) {
  * Callback for loading explorable scene.
  *
  * @callback onloadCallback
+ * @param {String} name - Name of the explorable.
  * @param {String} scene - Scene of the explorable.
  * @param {String} enrolmentId - Unique identifier to distinguish relationship between a dialogue and user.
  *

@@ -82,14 +82,14 @@ import { load, onload, complete, cancel } from '@learnupio/explorable-helpers'
 In order to make minimum functional explorable, you'll need to provide `onload` callback and expose `load` function globally.
 
 ```js
-onload((scene, enrolmentId) => {
+onload((name, scene, enrolmentId) => {
   // bootstrap, initialize or do whatever you want with your explorable here.
 })
 
-window.load = load
+window.explorables = { load }
 ```
 
-Having `window.load` function with exact name is required, since mobile apps directly look for that function name, and call it with relevant arguments.
+Having `window.explorables.load` function with exact name is required, since mobile apps directly look for that function name, and call it with relevant arguments.
 
 After that point, based on your requirements, you can call `complete` or `cancel` functions whenever you see fit.
 
