@@ -1,6 +1,6 @@
 {
   "name": "@learnupio/explorable-helpers",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Helper functions and callbacks for better mobile client <> explorable view integration.",
   "main": "dist/index.js",
   "module": "dist/index.m.js",
