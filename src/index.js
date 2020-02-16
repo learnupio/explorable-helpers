@@ -21,7 +21,7 @@ function postMessage(msg) {
   }
   else {
     // android or dev browser
-    learnupAndroid.postMessage(message)
+    learnupAndroid.postMessage(msg)
   }
 }
 
